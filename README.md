@@ -16,27 +16,33 @@
 
 ## 训练
 模型主要目的是进行实体间关系的多分类任务。
+
 模型使用的是lstm+attention模型。BiLSTM用于提取上下文信息，Attention用于得到句子级别的向量表示。
+
 每个样本特征 :  pos1 + word + pos2 。其中pos1和pos2分别代表当前word对于实体1和实体2距离的向量表征。
+
 数据集一共包含11中关系，可在relation2id.txt中查看
+
 训练前先运行data文件夹中的 `data_util.py` 文件，将数据处理成pkl文件供模型使用。 
+
 运行` main.py`即可开始训练，可以在`params_config.py`文件中设置epoch、batch等参数，运行结束模型会储存到backup文件夹中
 
 
 
 ## 准确率
 自己电脑跑的一部分数据，结果如下，由于设置的epoch为10，所以三种参数值不是太高。
+![result]()
 
-| 准确率 | 召回率 | F1值 |
-| ------ | ------ | ------ |
-| 55.08% | 55.59% | 55.33% |
+
 
 ## 思考
 加入其他的特征向量可能会提高准确率，论文中其他参数的设定是不是最优的，有待考证。
 
 ## 参考
 Attention-Based Bidirectional Long Short-Term Memory Networks for Relation Classification
+
 论文地址:https://www.aclweb.org/anthology/P16-2034/
+
 
 
 
