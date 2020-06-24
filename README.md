@@ -31,7 +31,7 @@
 
 ## 准确率
 自己电脑跑的一部分数据，结果如下，由于设置的epoch为10，所以三种参数值不是太高。
-![result]()
+![result](https://github.com/jinlianchao185874/NRE-1/blob/master/result.jpg)
 
 
 
